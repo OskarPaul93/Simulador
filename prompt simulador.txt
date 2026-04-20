@@ -1,0 +1,14 @@
+prompt 1: Actua como un diseñador grafico experto.
+Necesito que hagas mi pagina responsive (que se vea perfecta en celulares y tablets).
+Reglas importantes:
+Solo puedes cambiar HTML y css: No uses librerías externas (como Bootstrap o Tailwind).
+No toques los IDs: No cambies ni borres ningún id de los componentes, los necesito para mi código.
+Requiero que la interfaz se parezca o sea igual a be Produbanco
+Buen gusto: como diseñador, asegúrate de que los espacios y tamaños de letra se vean bien en pantallas pequeñas.
+Este es mi código.
+
+prompt 2: quiero que sea tipo banca real como la de Produbanco, 100% adaptable (sin ancho fijo), colores corporativos de Produbanco
+
+promt 3: te adjunto un link: https://www.produbanco.com.ec/banca-personas/creditos/credito-en-linea/simulador-de-credito-de-consumo/ . Quiero que se parezca a eso.
+
+promt 4: quiero que elimines la opción de reiniciar y coloques colores verdes similares al de Produbanco y además coloca una imagen denominada logo1 en la parte izquierda en el cuadro donde dice simulador de crédito y en la parte derecha coloca la imagen denominada logo2 , además donde dice simulador de crédito quiero que el fondo sea blanco y las letras Verde
