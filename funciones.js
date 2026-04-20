@@ -28,9 +28,13 @@ function calcularCapacidadPago (montoDisponible){
 }
 
 function calcularInteresSimple (monto, tasa, plazoAnios){
-    let interes= plazoAnios*monto*tasa/100;
-    interes= interes.toFixed(2);
-    return interes;
+    let interes = monto * (tasa / 100) * plazoAnios;
+    return Math.round(interes * 100) / 100;
+}
+
+const contribucion= 100;
+function calcularTotalPagar (monto, interes){
+    let total= monto + interes + contribucion;
+    return Math.round(total*100)/100;
 }
     
-

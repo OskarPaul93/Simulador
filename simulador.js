@@ -31,4 +31,10 @@ function calcular(){
     let tasa= calcularInteresSimple(monto, plazo, tasaInteres);
     let spTasa= document. getElementById("spnInteresPagar");
     spTasa.textContent= tasa;
+
+//Total pagar 
+    let totalPagar= calcularTotalPagar(monto, tasa);
+    let spTotalPagar= document.getElementById("spnTotalPrestamo");
+    spTotalPagar.textContent=totalPagar;
+
 }
