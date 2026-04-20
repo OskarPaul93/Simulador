@@ -19,10 +19,12 @@ function calcularDisponible (ingresos, egresos){
         disponible= 0;
 
     }
-
-
-
     return disponible; 
+}
+
+function calcularCapacidadPago (montoDisponible){
+    let capacidad= montoDisponible*0.5;
+    return capacidad;
 }
 
 

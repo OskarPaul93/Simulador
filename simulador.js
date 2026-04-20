@@ -10,12 +10,17 @@ function calcular(){
 
     //Guardar retorno en una variable
     let disponible= calcularDisponible (ingresos, egresos);
-    
+
 
     //Paso previo para mostrar la respuesta
     let spDisponible= document.getElementById("spnDisponible");
 
     //Mostrar texto en pantalla
     spDisponible.textContent= disponible;
+
+//Capacidad de pago
+    let capacidadPago= calcularCapacidadPago(disponible);
+    let spCapacidadPago= document.getElementById("spnCapacidadPago");
+    spCapacidadPago.textContent=capacidadPago;
 
 }
