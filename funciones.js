@@ -17,14 +17,13 @@ function calcularDisponible (ingresos, egresos){
     disponible= disponible.toFixed(2);
     if (disponible<0){
         disponible= 0;
-
     }
     return disponible; 
 }
 
 function calcularCapacidadPago (montoDisponible){
     let capacidad= montoDisponible*0.5;
-    return capacidad;
+    return Math.round(capacidad*100)/100;
 }
 
 function calcularInteresSimple (monto, tasa, plazoAnios){
@@ -42,5 +41,9 @@ function calcularCuotaMensual (total, plazoAnios){
     let cuotaMensual= total/(plazoAnios*12);
     return Math.round(cuotaMensual*100)/100;
 
+}
+
+function aprobarCredito(capacidadPago, cuotaMensual){
+    return capacidadPago>= cuotaMensual;
 }
     

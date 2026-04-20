@@ -42,4 +42,13 @@ function calcular(){
     let spMensual=document.getElementById("spnCuotaMensual")
     spMensual.textContent=mensual;
 
+//Credito Aprobado o rechazado
+    let aprobado=aprobarCredito(capacidadPago,mensual);
+    let spAprobado= document.getElementById("spnEstadoCredito")
+    if (aprobado){
+        spAprobado.textContent="CREDITO APROBADO";
+    } else {
+        spAprobado.textContent="CREDITO RECHAZADO"
+    }
+
 }
