@@ -25,29 +25,34 @@
 
         <div class="campo">
             <label>Ingresos</label>
-            <input type="text" id="txtIngresos">
+            <input type="text" id="txtIngresos" onblur="validarIngresos()">
+<small id="errIngresos" class="error"></small>
         </div>
 
         <div class="campo">
             <label>Egresos</label>
-            <input type="text" id="txtEgresos">
+            <input type="text" id="txtEgresos" onblur="validarEgresos()">
+<small id="errEgresos" class="error"></small>
         </div>
 
         <h2>Solicitud de crédito</h2>
 
         <div class="campo">
             <label>Monto</label>
-            <input type="text" id="txtMonto">
+            <input type="text" id="txtMonto" onblur="validarMonto()">
+<small id="errMonto" class="error"></small>
         </div>
 
         <div class="campo">
             <label>Plazo en años</label>
-            <input type="text" id="txtPlazo">
+            <input type="text" id="txtPlazo" onblur="validarPlazo()">
+<small id="errPlazo" class="error"></small>
         </div>
 
         <div class="campo">
             <label>Tasa de interés (%)</label>
-            <input type="text" id="txtTasaInteres">
+            <input type="text" id="txtTasaInteres" onblur="validarTasa()">
+<small id="errTasa" class="error"></small>
         </div>
 
         <button id="btnCalcularCredito" onclick="calcular()">Calcular crédito</button>

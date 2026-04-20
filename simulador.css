@@ -151,4 +151,14 @@ button {
   .logo {
     width: 30px;
   }
+
+  .error{
+  color: red !important;
+  font-style: italic;
+}
+
+.info{
+  color: #003366 !important;
+  font-style: italic;
+}
 }

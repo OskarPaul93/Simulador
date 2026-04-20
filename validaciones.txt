@@ -1,0 +1,21 @@
+Prompt1: Quiero validar inputs en JavaScript. 
+Reglas:
+-Mostrar mensaje debajo de cada input (no usar alert)
+-El mensaje debe ser en color rojo y en cursiva
+-Validaciones:
+Solo números
+Maximo 8 dígitos
+No puede estar vacio
+Para los datos financiero los ingresos deben ser mínimo de 460 dólares y los egresos máximo del 50%
+Para la solicitud de crédito el monto máximo es de 90000 dólares y el monto mínimo es de 1000 dólares
+El plazo en años debe ser mínimo de 1 año y máximo 5 años
+Y la tasa de interés debe estar entre el 10% y 20%
+Condiciones técnicas:
+Usar los mismos IDs existentes no los cambies
+Usar eventos:
+onblur para validar cuando el usuario sale del input
+no modificar IDs existentes
+Mostrar errores en un elemento debajo del input
+Finalmente indicame y devuelveme solo las partes que debo agregar o modificar (HTML, CSS, Y JS) no todo el código.
+
+Promp 2: quiero que los mensajes cuando no cumplen las condiciones por ejemplo :mínimo $460 salga en color azul oscuro. y máximo 8 dígitos que van de 0 dólares hasta 90000.00 dolares
