@@ -37,4 +37,9 @@ function calcular(){
     let spTotalPagar= document.getElementById("spnTotalPrestamo");
     spTotalPagar.textContent=totalPagar;
 
+//Cuota Mensual
+    let mensual= calcularCuotaMensual(totalPagar, plazo);
+    let spMensual=document.getElementById("spnCuotaMensual")
+    spMensual.textContent=mensual;
+
 }

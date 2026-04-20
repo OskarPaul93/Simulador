@@ -37,4 +37,10 @@ function calcularTotalPagar (monto, interes){
     let total= monto + interes + contribucion;
     return Math.round(total*100)/100;
 }
+
+function calcularCuotaMensual (total, plazoAnios){
+    let cuotaMensual= total/(plazoAnios*12);
+    return Math.round(cuotaMensual*100)/100;
+
+}
     
