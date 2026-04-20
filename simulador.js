@@ -23,4 +23,12 @@ function calcular(){
     let spCapacidadPago= document.getElementById("spnCapacidadPago");
     spCapacidadPago.textContent=capacidadPago;
 
+//Interes
+    let monto= recuperarFloat ("txtMonto");
+    let plazo= recuperarFloat ("txtPlazo");
+    let tasaInteres= recuperarFloat ("txtTasaInteres");
+
+    let tasa= calcularInteresSimple(monto, plazo, tasaInteres);
+    let spTasa= document. getElementById("spnInteresPagar");
+    spTasa.textContent= tasa;
 }
