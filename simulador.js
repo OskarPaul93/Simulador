@@ -3,64 +3,65 @@
 function calcular(){
 
     if(
-    !validarIngresos() ||
-    !validarEgresos() ||
-    !validarMonto() ||
-    !validarPlazo() ||
-    !validarTasa()
-){
-    return;
-}
-    //let ingresos= parsefloat(document.getElementById("txtIngresos").value);
-    //let egresos= parsefloat(document.getElementById("txtEgresos").value);
-
-    //let disponible= calcularDisponible (ingresos, egresos);
-    let ingresos= recuperarFloat("txtIngresos");
-    let egresos= recuperarFloat("txtEgresos");
-
-    //Guardar retorno en una variable
-    let disponible= calcularDisponible (ingresos, egresos);
-
-
-    //Paso previo para mostrar la respuesta
-    let spDisponible= document.getElementById("spnDisponible");
-
-    //Mostrar texto en pantalla
-    spDisponible.textContent= disponible;
-
-//Capacidad de pago
-    let capacidadPago= calcularCapacidadPago(disponible);
-    let spCapacidadPago= document.getElementById("spnCapacidadPago");
-    spCapacidadPago.textContent=capacidadPago;
-
-//Interes
-    let monto= recuperarFloat ("txtMonto");
-    let plazo= recuperarFloat ("txtPlazo");
-    let tasaInteres= recuperarFloat ("txtTasaInteres");
-
-    let tasa= calcularInteresSimple(monto, plazo, tasaInteres);
-    let spTasa= document. getElementById("spnInteresPagar");
-    spTasa.textContent= tasa;
-
-//Total pagar 
-    let totalPagar= calcularTotalPagar(monto, tasa);
-    let spTotalPagar= document.getElementById("spnTotalPrestamo");
-    spTotalPagar.textContent=totalPagar;
-
-//Cuota Mensual
-    let mensual= calcularCuotaMensual(totalPagar, plazo);
-    let spMensual=document.getElementById("spnCuotaMensual")
-    spMensual.textContent=mensual;
-
-//Credito Aprobado o rechazado
-    let aprobado=aprobarCredito(capacidadPago,mensual);
-    let spAprobado= document.getElementById("spnEstadoCredito")
-    if (aprobado){
-        spAprobado.textContent="CREDITO APROBADO";
-    } else {
-        spAprobado.textContent="CREDITO RECHAZADO"
+        !validarIngresos() ||
+        !validarEgresos() ||
+        !validarMonto() ||
+        !validarPlazo() ||
+        !validarTasa()
+    ){
+        return;
     }
 
+    let ingresos = recuperarFloat("txtIngresos");
+    let arriendo = recuperarFloat("txtEgresos");
+    let alimentacion = recuperarFloat("txtEgresos1");
+    let varios = recuperarFloat("txtEgresos2");
+
+    // SUMA DE GASTOS
+    let egresos = arriendo + alimentacion + varios;
+    if (egresos < 0){
+    egresos = 0;
+}
+
+    // MOSTRAR TOTAL GASTOS
+    let spTotalGastos = document.getElementById("spnTotalGastos");
+    spTotalGastos.textContent = egresos.toFixed(2);
+
+    // CALCULAR DISPONIBLE
+    let disponible = calcularDisponible(ingresos, egresos);
+
+    let spDisponible = document.getElementById("spnDisponible");
+    spDisponible.textContent = disponible;
+
+    // CAPACIDAD DE PAGO
+    let capacidadPago = calcularCapacidadPago(disponible);
+    document.getElementById("spnCapacidadPago").textContent = capacidadPago;
+
+    // INTERÉS
+    let monto = recuperarFloat("txtMonto");
+    let plazo = recuperarFloat("txtPlazo");
+    let tasaInteres = recuperarFloat("txtTasaInteres");
+
+    let interes = calcularInteresSimple(monto, tasaInteres, plazo);
+    document.getElementById("spnInteresPagar").textContent = interes;
+
+    // TOTAL
+    let totalPagar = calcularTotalPagar(monto, interes);
+    document.getElementById("spnTotalPrestamo").textContent = totalPagar;
+
+    // CUOTA
+    let mensual = calcularCuotaMensual(totalPagar, plazo);
+    document.getElementById("spnCuotaMensual").textContent = mensual;
+
+    // APROBACIÓN
+    let aprobado = aprobarCredito(capacidadPago, mensual);
+    let spAprobado = document.getElementById("spnEstadoCredito");
+
+    if (aprobado){
+        spAprobado.textContent = "CREDITO APROBADO";
+    } else {
+        spAprobado.textContent = "CREDITO RECHAZADO";
+    }
 }
 
 function esNumero(valor){
