@@ -214,3 +214,9 @@ function validarTasa(){
     mostrarError("errTasa","");
     return true;
 }
+
+function bloquearNegativos(e){
+    if (e.key === "-"){
+        e.preventDefault();
+    }
+}

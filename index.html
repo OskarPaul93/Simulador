@@ -25,13 +25,13 @@
 
         <div class="campo">
             <label>Ingresos</label>
-            <input type="text" id="txtIngresos" onblur="validarIngresos()">
+            <input type="text" id="txtIngresos" onkeypress="bloquearNegativos(event)" onblur="validarIngresos()">
 <small id="errIngresos" class="error"></small>
         </div>
 
         <div class="campo">
             <label>Arriendo</label>
-            <input type="text" id="txtEgresos" onblur="validarEgresos()">
+            <input type="text" id="txtEgresos" onkeypress="bloquearNegativos(event)" onblur="validarEgresos()">
 <small id="errEgresos" class="error"></small>
         </div>
 
@@ -41,13 +41,13 @@
 
 <div class="campo">
             <label>Alimentacion</label>
-            <input type="text" id="txtEgresos1" onblur="validarEgresos()">
+            <input type="text" id="txtEgresos1" onkeypress="bloquearNegativos(event)"  onblur="validarEgresos()">
 <small id="errEgresos" class="error"></small>
         </div>
 
 <div class="campo">
             <label>Varios</label>
-            <input type="text" id="txtEgresos2" onblur="validarEgresos()">
+            <input type="text" id="txtEgresos2"  onkeypress="bloquearNegativos(event)" onblur="validarEgresos()">
 <small id="errEgresos" class="error"></small>
         </div>   
         
@@ -65,19 +65,19 @@
 
         <div class="campo">
             <label>Monto</label>
-            <input type="text" id="txtMonto" onblur="validarMonto()">
+            <input type="text" id="txtMonto"  onkeypress="bloquearNegativos(event)" onblur="validarMonto()">
 <small id="errMonto" class="error"></small>
         </div>
 
         <div class="campo">
             <label>Plazo en años</label>
-            <input type="text" id="txtPlazo" onblur="validarPlazo()">
+            <input type="text" id="txtPlazo" onkeypress="bloquearNegativos(event)"  onblur="validarPlazo()">
 <small id="errPlazo" class="error"></small>
         </div>
 
         <div class="campo">
             <label>Tasa de interés (%)</label>
-            <input type="text" id="txtTasaInteres" onblur="validarTasa()">
+            <input type="text" id="txtTasaInteres" onkeypress="bloquearNegativos(event)" onblur="validarTasa()">
 <small id="errTasa" class="error"></small>
         </div>
 
